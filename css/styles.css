@@ -122,6 +122,7 @@ select:-webkit-autofill:focus {
   opacity: 0.6;
 }
 .logo__img {
+  flex-shrink: 0;
   width: 103px;
   height: 40px;
 }
@@ -199,13 +200,13 @@ select:-webkit-autofill:focus {
   opacity: 0.08;
   z-index: 0;
 }
-
-.fetures__top-img {
+.features__top-img {
   margin-top: -70px;
   width: 540px;
   height: 720px;
   box-shadow: 0px 75px 100px -50px rgba(56, 66, 85, 0.50);
   z-index: 50;
+  margin-right: 24px;
 }
 .features__content {
   position: relative;
@@ -267,6 +268,7 @@ select:-webkit-autofill:focus {
   position: relative;
   margin-bottom: -80px;
   z-index: 50;
+  margin-left: 24px;
 }
 
 /* OUR MENU */
@@ -375,6 +377,7 @@ select:-webkit-autofill:focus {
   height: 600px;
   box-shadow: 0px 75px 100px -50px rgba(56, 66, 85, 0.50);
   z-index: 50;
+  margin-right: 24px;
 }
 .slide__content {
   padding-top: 70px;
@@ -469,13 +472,15 @@ select:-webkit-autofill:focus {
   display: flex;
 }
 .footer__logo {
-  margin-right: auto;
+  flex-shrink: 0;
+  margin-right: 24px;
 }
 .location-working--wrapper{
   max-width: 815px;
   width: 100%;
   display: flex;
   justify-content: space-between;
+  margin-left: auto;
 }
 .location-info {
   color: var(--white);
@@ -495,7 +500,9 @@ select:-webkit-autofill:focus {
 }
 
 
-
+.main-content{
+  /* display: none; */
+}
 
 /* RETINA BGS */
 @media
@@ -507,5 +514,147 @@ only screen and (                min-resolution: 192dpi),
 only screen and (                min-resolution: 2dppx) {
   .header-hero--wrapper {
     background-image: url("../img/hero-bg@2x.jpg");
+  }
+  .cta {
+    background-image: url(../img/cta-bg@2x.jpg);
+  }
+}
+
+/* RESPONSIVE DESIGN */
+@media only screen and (max-width: 1440px){
+  .features__top::before{
+    left: -165px;
+    width: 895px;
+  }
+  .features__bottom::after{
+    right: -165px;
+    width: 895px;
+  }
+}
+@media only screen and (max-width: 1200px){
+  .features__top::before{
+    display: none;
+  }
+  .features__bottom::before{
+    display: none;
+  }
+  .features__bottom::after{
+    display: none;
+  }
+  .slider__container::before{
+    display: none;
+  }
+  .slider__container::after{
+    display: none;
+  }
+}
+@media only screen and (max-width: 992px){
+  .container{
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  /* SECTION HEADER HERO  */
+  .header-hero--wrapper {
+    padding-top: 375px;
+    padding-bottom: 215px;
+    background-image: url(../img/hero-bg-tablet.jpg);
+  }
+  /* HEADER  */
+  .header {
+    padding: 0;
+    margin-bottom: 38px;
+  }
+  .header__container {
+    justify-content: center;
+  }
+  /* HERO  */
+  .hero {
+    padding: 0;
+  }
+  .hero__container{
+    display: flex;
+    justify-content: center;
+  }
+  .hero__content {
+    max-width: 689px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .hero__title {
+    margin-bottom: 20px;
+    font-size: 48px;
+    line-height: 64px;
+    letter-spacing: -0.6px;
+  }
+  .hero__text {
+    margin-bottom: 52px;
+  }
+
+  /* FEATURES */
+  .features__top {
+    flex-direction: column;
+  }
+  .features__top::before{
+    display: flex;
+    top: 100px;
+    left: -40px;
+    width: 400px;
+  }
+  .features__top-img {
+    margin-top: -96px;
+    width: 573px;
+    height: 360px;
+    margin-right: 0;
+    margin-bottom: 56px;
+    object-fit: cover;
+  }
+  .features__content {
+    align-items: center;
+    text-align: center;
+    padding-top: 62px;
+    max-width: 457px;
+    width: 100%;
+  }
+  .features__content::before{
+    left: calc(50% - 35px);
+  }
+  /* Features bottom */
+  .features__bottom {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 118px;
+    padding-bottom: 118px;
+  }
+  .features__bottom::before{
+    display: flex;
+    top: 345px;
+    left: calc(100% - 260px);
+  }
+  .features__bottom::after{
+    display: flex;
+    right: -40px;
+    bottom: 0;
+    width: 400px;
+  }
+  .features__bottom-img {
+    order: -1;
+    width: 573px;
+    height: 360px;
+    margin-left: 0;
+    margin-bottom: 56px;
+  }
+.menu{
+  display: none;
+}
+  .slider{
+    display: none;
+  }
+  .cta{
+    display: none;
+  }
+  .footer{
+    display: none;
   }
 }
