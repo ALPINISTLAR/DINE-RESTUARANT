@@ -1,3 +1,12 @@
+/* CUSTOM PROPS  */
+:root{
+  --beaver:  #9E7F66;
+  --cod-gray:  #111;
+
+  --mirage:  #17192B;
+  --ebony-clay: #242B37;
+  --shuttle-gray:  #5C6779;
+}
 /* ** GLOBAL STYLES ** */
 html
 {
@@ -7,9 +16,19 @@ html
 }
 *,
 *::before,
-*::after
-{
+*::after{
   box-sizing: inherit;
+}
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+h1,h2,h3,h4,h5,h6{
+  margin: 0;
 }
 /* ----------------- */
 /* ===== body ====== */
