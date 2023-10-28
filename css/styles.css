@@ -238,7 +238,18 @@ select:-webkit-autofill:focus {
   justify-content: space-between;
   padding-top: 120px;
 }
-
+.features__bottom::before{
+  width: 160px;
+  height: 76px;
+  display: flex;
+  content: "";
+  position: absolute;
+  bottom: 282px;
+  right: -114px;
+  background-image: url(../img/hamburger.svg);
+  background-position: center center;
+  z-index: 100;
+}
 .features__bottom::after{
   position: absolute;
   display: flex;
@@ -264,6 +275,7 @@ select:-webkit-autofill:focus {
   padding-bottom: 120px;
   background-color: var(--cod-gray);
 }
+
 .menu__container {
   display: flex;
   justify-content: space-between;
@@ -326,8 +338,33 @@ select:-webkit-autofill:focus {
   padding-top: 160px;
   padding-bottom: 160px;
 }
-.slider__container {
-
+.slider__container{
+  position: relative;
+}
+.slider__container::before{
+  position: absolute;
+  display: flex;
+  content: "";
+  left: -481px;
+  top: -160px;
+  width: 895px;
+  height: 320px;
+  border-radius: 0px 100px 0px 0px;
+  background-color: var(--shuttle-gray);
+  opacity: 0.08;
+  z-index: 0;
+}
+.slider__container::after{
+  width: 160px;
+  height: 76px;
+  display: flex;
+  content: "";
+  position: absolute;
+  top: -38px;
+  left: -16px;
+  background-image: url(../img/hamburger.svg);
+  background-position: center center;
+  z-index: 100;
 }
 .slide {
   display: flex;
