@@ -421,7 +421,41 @@ select:-webkit-autofill:focus {
   margin-right: 24px;
 }
 
+/* FOOTER  */
+.footer {
+  padding-top: 80px;
+  padding-bottom: 75px;
+  background-color: var(--cod-gray);
+}
 
+.footer__container {
+  display: flex;
+}
+.footer__logo {
+  margin-right: auto;
+}
+.location-working--wrapper{
+  max-width: 815px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.location-info {
+  color: var(--white);
+  font-size: 14px;
+  line-height: 28px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-right: 32px;
+}
+.working-time-info {
+  width: 445px;
+  color: var(--white);
+  font-size: 14px;
+  line-height: 28px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
 
 
 
