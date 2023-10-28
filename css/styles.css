@@ -78,7 +78,36 @@ select:-webkit-autofill:focus {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-
+/* BUTTON */
+.btn{
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 16px;
+  letter-spacing: 2.5px;
+  border: 1px solid transparent;
+  padding: 24px 55px;
+  transition: 0.5s ease;
+}
+.btn:active{
+  opacity: 0.6;
+}
+.btn--black{
+  background-color: var(--cod-gray);
+  color: var(--white);
+}
+.btn--black:hover{
+  background-color: transparent;
+  color: var(--cod-gray);
+  border-color: var(--cod-gray);
+}
+.btn--white{
+  color: var(--white);
+  border-color: var(--white);
+}
+.btn--white:hover{
+  color: var(--cod-gray);
+  background-color: var(--white);
+}
 /* *** CONTAINER *** */
 .container
 {
